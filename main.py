@@ -19,4 +19,11 @@ def generate_and_display_sudoku():
             print(sudoku_grid[row][col], end=" ")
         print()
         
-generate_and_display_sudoku()
+grid = generate_and_display_sudoku()
+
+def find_empty_cell(grid):
+    for row in range(9):
+        for col in range(9):
+            if grid[row][col]==0:
+                return [row, col]
+    return None
